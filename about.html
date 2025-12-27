@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 声明文档类型为HTML5 -->
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8，确保中文正常显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 适配移动端：宽度=device宽度，初始缩放1.0 -->
+    <title>关于福建 - 福建之旅</title> <!-- 页面标题 -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- 引入外部样式表 -->
+</head>
+<body>
+    <!-- 头部导航区域：包含logo和搜索框 -->
+    <header class="header">
+        <div class="header-content"> <!-- 头部内容容器，用于居中布局 -->
+            <!-- 网站logo：点击跳转首页 -->
+            <a href="index.html" class="logo">
+                <img src="./images/logo.png" alt="福建之旅"> <!-- logo图片 -->
+                福建之旅 <!-- logo文字 -->
+            </a>
+            <!-- 搜索框容器 -->
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="请输入关键词"> <!-- 搜索输入框 -->
+                <button class="search-btn">搜索</button> <!-- 搜索按钮 -->
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航菜单：页面跳转链接 -->
+    <nav class="nav-menu">
+        <div class="nav-content"> <!-- 导航内容容器 -->
+            <a href="index.html" class="nav-item">首页</a> <!-- 首页链接 -->
+            <a href="about.html" class="nav-item active">关于福建</a> <!-- 关于福建链接（当前页，active高亮） -->
+            <a href="travel-guide.html" class="nav-item">旅游攻略</a> <!-- 旅游攻略链接 -->
+            <a href="food.html" class="nav-item">美食小吃</a> <!-- 美食小吃链接 -->
+            <a href="contact.html" class="nav-item">联系我们</a> <!-- 联系我们链接 -->
+        </div>
+    </nav>
+
+    <!-- 轮播图容器 -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- 轮播图遮盖层：增加渐变遮罩，提升文字可读性 -->
+            <div class="carousel-overlay"></div>
+            
+            <!-- 轮播图幻灯片1（默认激活） -->
+            <div class="carousel-slide active">
+                <img src="./images/1.jpg" alt="轮播图1"> <!-- 轮播图片 -->
+                <div class="carousel-title"> <!-- 轮播图标题容器 -->
+                    <img src="./images/1.png" alt="标题"> <!-- 标题图片 -->
+                </div>
+            </div>
+            <!-- 轮播图幻灯片2-6（默认隐藏） -->
+            <div class="carousel-slide">
+                <img src="./images/2.jpg" alt="轮播图2">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/3.jpg" alt="轮播图3">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/4.jpg" alt="轮播图4">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/5.jpg" alt="轮播图5">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/6.jpg" alt="轮播图6">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            
+            <!-- 轮播图左右切换按钮 -->
+            <button class="carousel-controls prev" onclick="changeSlide(-1)">❮</button> <!-- 上一张：调用changeSlide(-1) -->
+            <button class="carousel-controls next" onclick="changeSlide(1)">❯</button> <!-- 下一张：调用changeSlide(1) -->
+            
+            <!-- 轮播图指示器（小圆点） -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span> <!-- 指示器1（激活）：点击跳转到第1张 -->
+                <span class="indicator" onclick="currentSlide(2)"></span> <!-- 指示器2：点击跳转到第2张 -->
+                <span class="indicator" onclick="currentSlide(3)"></span> <!-- 指示器3：点击跳转到第3张 -->
+                <span class="indicator" onclick="currentSlide(4)"></span> <!-- 指示器4：点击跳转到第4张 -->
+                <span class="indicator" onclick="currentSlide(5)"></span> <!-- 指示器5：点击跳转到第5张 -->
+                <span class="indicator" onclick="currentSlide(6)"></span> <!-- 指示器6：点击跳转到第6张 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面主要内容区域 -->
+    <div class="content">
+        <!-- 关于福建板块 -->
+        <section class="section"> <!-- 独立板块容器 -->
+            <div class="section-title-center"> <!-- 板块标题居中容器 -->
+                <div class="section-title">关于福建</div> <!-- 板块标题 -->
+            </div>
+            <div class="about-content"> <!-- 关于福建内容容器 -->
+                <div class="about-map"> <!-- 福建地图容器 -->
+                    <img src="./images/2.png" alt="福建省地图"> <!-- 福建省地图图片 -->
+                </div>
+                <div class="about-text"> <!-- 关于福建文字描述容器 -->
+                    <!-- 福建基本介绍 -->
+                    <p class="about-description">福建省简称"闽"，地处中国东南沿海，省会为福州。其陆地面积12.4万平方千米，海域面积13.6万平方千米，北接浙江，西邻江西，西南与广东相连，东隔台湾海峡与台湾省相望，连通东海、南海与太平洋。</p>
+                    <!-- 福建行政区划、气候、历史、产业 -->
+                    <p class="about-description">建省下辖9个地级市，常住人口4188万（2022年）。地形以山地丘陵为主，属于亚热带海洋性季风气候，冬短夏长、冬暖夏凉、雨、干季分明。早在18万年前，就有古人类在三明万寿岩一带活动，历史源远流长。唐开元二十一年（公元733年）设置福建经略使，"福建"之名由此而来。在产业发展上，第一产业聚焦特色现代农业，茶叶、蔬菜等十个乡村特色产业蓬勃发展；第二产业作为传统制造业大省，电子信息、石油化工、机械装备为三大主导产业，纺织鞋服传统优势产业同样表现出色；第三产业以文旅经济、现代物流等产业为主，积极推动现代服务业发展。2024年，福建全省地区生产总值57761.02亿元，经济发展态势良好。</p>
+                    <!-- 福建文化、非遗、世界遗产 -->
+                    <p class="about-description">福建地域文化魅力独特，闽南文化、客家文化、妈祖文化、闽都文化等各具特色。泉州、福州、漳州、长汀均为国家历史文化名城，境内名胜古迹众多，拥有169个全国重点文物保护单位。作为非遗大省，是中国唯一拥有联合国教科文组织三大类非遗名录（名册）的省份，南音、邵武傩舞等145项入选国家级非遗代表性项目。同时，福建还是世界遗产荟萃全省的省份之一，拥有"鼓浪屿：历史国际社区""泉州：宋元中国的世界海洋商贸中心""福建土楼""福建泰宁世界地质公园""武夷山"五项世界遗产，还有10处国家AAAAA级旅游景区，国家级风景名胜区数量居中国第3位。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 福建主要城市板块 -->
+        <section class="cities-section"> <!-- 城市板块容器 -->
+            <div class="section-title-center"> <!-- 板块标题居中容器 -->
+                <div class="section-title">福建主要城市</div> <!-- 板块标题 -->
+            </div>
+            <div class="cities-grid"> <!-- 城市卡片网格容器 -->
+                <!-- 福州卡片 -->
+                <div class="city-card"> <!-- 城市卡片容器 -->
+                    <img src="./images/37.jpg" alt="福州" class="city-image"> <!-- 城市图片 -->
+                    <div class="city-content"> <!-- 城市内容容器 -->
+                        <h3 class="city-name">福州</h3> <!-- 城市名称 -->
+                        <p class="city-description">福建省省会，有着2200多年的建城史，是国家历史文化名城。素有"有福之州"的美誉，是海上丝绸之路的重要起点，闽都文化的发源地。</p> <!-- 城市描述 -->
+                        <p class="city-features">特色：三坊七巷、西湖公园、乌山、于山</p> <!-- 城市特色 -->
+                    </div>
+                </div>
+                <!-- 厦门卡片 -->
+                <div class="city-card">
+                    <img src="./images/38.jpg" alt="厦门" class="city-image">
+                    <div class="city-content">
+                        <h3 class="city-name">厦门</h3>
+                        <p class="city-description">风景秀丽的海滨城市，是中国最适合居住的城市之一。鼓浪屿是世界文化遗产，厦门大学是中国最美丽的大学之一。</p>
+                        <p class="city-features">特色：鼓浪屿、环岛路、厦门大学、曾厝垵</p>
+                    </div>
+                </div>
+                <!-- 泉州卡片 -->
+                <div class="city-card">
+                    <img src="./images/39.jpg" alt="泉州" class="city-image">
+                    <div class="city-content">
+                        <h3 class="city-name">泉州</h3>
+                        <p class="city-description">古代海上丝绸之路的起点，世界宗教博物馆，联合国教科文组织设立的世界多元文化展示中心。2021年被列入世界遗产名录。</p>
+                        <p class="city-features">特色：开元寺、清净寺、洛阳桥、崇武古城</p>
+                    </div>
+                </div>
+                <!-- 宁德卡片 -->
+                <div class="city-card">
+                    <img src="./images/40.jpg" alt="宁德" class="city-image">
+                    <div class="city-content">
+                        <h3 class="city-name">宁德</h3>
+                        <p class="city-description">闽东中心城市，素有"海上天湖，佛国仙都，百里画廊"的美誉。拥有世界地质公园白水洋、太姥山等自然景观，是福建重要的沿海开放城市。</p>
+                        <p class="city-features">特色：太姥山、白水洋、霞浦滩涂、福鼎白茶</p>
+                    </div>
+                </div>
+                <!-- 三明卡片 -->
+                <div class="city-card">
+                    <img src="./images/17.jpg" alt="三明" class="city-image">
+                    <div class="city-content">
+                        <h3 class="city-name">三明</h3>
+                        <p class="city-description">闽中山城，素有"绿色都市"之称，是全国文明城市、国家卫生城市。拥有泰宁世界地质公园，是中国优秀旅游城市，生态环境优美。</p>
+                        <p class="city-features">特色：泰宁大金湖、将乐玉华洞、永安桃源洞、沙县小吃</p>
+                    </div>
+                </div>
+                <!-- 南平卡片 -->
+                <div class="city-card">
+                    <img src="./images/18.jpg" alt="南平" class="city-image">
+                    <div class="city-content">
+                        <h3 class="city-name">南平</h3>
+                        <p class="city-description">闽北山城，素有"福建绿色宝库"之称，拥有武夷山世界双重遗产。是朱熹理学文化发源地，生态资源丰富，茶文化底蕴深厚。</p>
+                        <p class="city-features">特色：武夷山、九曲溪、大红袍、延平湖</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+     
+    </div>
+
+    <!-- 页脚文字 -->
+    <div class="footer-text">
+        世界那么大，我想去看看！
+    </div>
+
+    <!-- 引入外部JS文件：轮播图等交互功能 -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

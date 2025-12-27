@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"> <!-- 字符编码UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 移动端适配 -->
+    <title>联系我们 - 福建之旅</title> <!-- 页面标题 -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- 引入样式表 -->
+</head>
+<body>
+    <!-- 头部导航：logo + 搜索框 -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="./images/logo.png" alt="福建之旅">
+                福建之旅
+            </a>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="请输入关键词">
+                <button class="search-btn">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航菜单 -->
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="about.html" class="nav-item">关于福建</a>
+            <a href="travel-guide.html" class="nav-item">旅游攻略</a>
+            <a href="food.html" class="nav-item">美食小吃</a>
+            <a href="contact.html" class="nav-item active">联系我们</a> <!-- 当前页高亮 -->
+        </div>
+    </nav>
+
+    <!-- 轮播图区域 -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-overlay"></div> <!-- 轮播图遮罩层 -->
+            
+            <!-- 轮播幻灯片1-6 -->
+            <div class="carousel-slide active">
+                <img src="./images/1.jpg" alt="轮播图1">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/2.jpg" alt="轮播图2">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/3.jpg" alt="轮播图3">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/4.jpg" alt="轮播图4">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/5.jpg" alt="轮播图5">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/6.jpg" alt="轮播图6">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            
+            <!-- 轮播切换按钮 -->
+            <button class="carousel-controls prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-controls next" onclick="changeSlide(1)">❯</button>
+            
+            <!-- 轮播指示器 -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+                <span class="indicator" onclick="currentSlide(5)"></span>
+                <span class="indicator" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="content">
+        <div class="main-content"> <!-- 主内容容器：左右分栏 -->
+            <!-- 左侧：关于我们 -->
+            <div class="left-section">
+                <div class="section-title-center">
+                    <div class="section-title">关于我们</div>
+                </div>
+                <p class="about-text">
+                    我们是一家致力于为客户提供优质服务的团队。多年来，我们专注于创新与专业发展，不断优化用户体验，通过持续的努力赢得了行业内外的广泛认可。如果您想了解更多关于我们的信息，欢迎联系我们或访问我们的官方网站。
+                </p>
+                <img src="./images/7.jpg" alt="关于我们" class="about-image"> <!-- 关于我们图片 -->
+            </div>
+
+            <!-- 右侧：联系我们表单 -->
+            <div class="right-section">
+                <div class="section-title-center">
+                    <div class="section-title">联系我们</div>
+                </div>
+                <div class="contact-form"> <!-- 联系表单容器 -->
+                    <form action="#" method="post"> <!-- 表单：提交地址#（仅前端），提交方式post -->
+                        <!-- 姓名输入框 -->
+                        <div class="form-group"> <!-- 表单组容器 -->
+                            <label class="form-label">姓名：</label> <!-- 表单标签 -->
+                            <input type="text" class="form-input" name="name" required> <!-- 文本输入框，必填 -->
+                        </div>
+                        
+                        <!-- 邮箱输入框 -->
+                        <div class="form-group">
+                            <label class="form-label">邮箱：</label>
+                            <input type="email" class="form-input" name="email" required> <!-- 邮箱输入框，必填 -->
+                        </div>
+                        
+                        <!-- 电话输入框 -->
+                        <div class="form-group">
+                            <label class="form-label">电话：</label>
+                            <input type="tel" class="form-input" name="phone" required> <!-- 电话输入框，必填 -->
+                        </div>
+                        
+                        <!-- 留言内容文本域 -->
+                        <div class="form-group">
+                            <label class="form-label">留言内容：</label>
+                            <textarea class="form-textarea" name="message" required placeholder="请在此输入您的留言内容..."></textarea> <!-- 多行文本框，必填，提示文字 -->
+                        </div>
+                        
+                        <!-- 提交按钮 -->
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn">提交</button> <!-- 提交按钮 -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- 联系信息展示 -->
+        <div class="contact-info"> <!-- 联系信息容器 -->
+            <div class="contact-details"> <!-- 联系详情容器 -->
+                <p><strong>您可以通过以下方式与我们取得联系：</strong></p>
+                <p>电话：400-123-4567</p> <!-- 联系电话 -->
+                <p>邮箱：contact@ourwebsite.com</p> <!-- 联系邮箱 -->
+                <p>地址：中国江西省南昌市中山路123号</p> <!-- 联系地址 -->
+                <p>姓名：李苑铭</p> <!-- 联系人 -->
+                <p>学号: 25216950205</p> <!-- 学号（自定义信息） -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚文字 -->
+    <div class="footer-text">
+        世界那么大，我想去看看！
+    </div>
+
+    <!-- 引入JS文件 -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

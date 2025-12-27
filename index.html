@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"> <!-- 字符编码UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 移动端适配 -->
+    <title>福建之旅</title> <!-- 页面标题（首页） -->
+    <link rel="stylesheet" href="./css/home.css"> <!-- 引入首页专属样式表 -->
+</head>
+<body>
+    <!-- 头部导航：logo + 搜索框 -->
+    <header class="header">
+        <div class="header-content"> <!-- 头部内容容器 -->
+            <a href="index.html" class="logo"> <!-- logo链接（跳转首页） -->
+                <img src="./images/logo.png" alt="福建之旅"> <!-- logo图片 -->
+                福建之旅 <!-- logo文字 -->
+            </a>
+            <div class="search-container"> <!-- 搜索容器 -->
+                <input type="text" class="search-box" placeholder="请输入关键词"> <!-- 搜索输入框 -->
+                <button class="search-btn">搜索</button> <!-- 搜索按钮 -->
+            </div>
+        </div>   
+    </header>
+
+    <!-- 导航菜单 -->
+    <nav class="nav-menu">
+        <div class="nav-content"> <!-- 导航内容容器 -->
+            <a href="index.html" class="nav-item active">首页</a> <!-- 首页（当前页，高亮） -->
+            <a href="about.html" class="nav-item">关于福建</a> <!-- 关于福建 -->
+            <a href="travel-guide.html" class="nav-item">旅游攻略</a> <!-- 旅游攻略 -->
+            <a href="food.html" class="nav-item">美食小吃</a> <!-- 美食小吃 -->
+            <a href="contact.html" class="nav-item">联系我们</a> <!-- 联系我们 -->
+        </div>
+    </nav>
+
+
+    <!-- 轮播图区域 -->
+    <div class="carousel-container"> <!-- 轮播图外层容器 -->
+        <div class="carousel"> <!-- 轮播图内层容器 -->
+            <!-- 轮播图遮罩层：渐变效果，提升文字可读性 -->
+            <div class="carousel-overlay"></div>
+            
+            <!-- 轮播幻灯片1（默认激活） -->
+            <div class="carousel-slide active">
+                <img src="./images/1.jpg" alt="轮播图1"> <!-- 轮播图片 -->
+                <div class="carousel-title"> <!-- 轮播标题容器 -->
+                    <img src="./images/1.png" alt="标题"> <!-- 标题图片 -->
+                </div>
+            </div>
+            <!-- 轮播幻灯片2-6（默认隐藏） -->
+            <div class="carousel-slide">
+                <img src="./images/2.jpg" alt="轮播图2">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/3.jpg" alt="轮播图3">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/4.jpg" alt="轮播图4">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/5.jpg" alt="轮播图5">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/6.jpg" alt="轮播图6">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            
+            <!-- 轮播切换按钮 -->
+            <button class="carousel-controls prev" onclick="changeSlide(-1)">❮</button> <!-- 上一张按钮：调用changeSlide(-1) -->
+            <button class="carousel-controls next" onclick="changeSlide(1)">❯</button> <!-- 下一张按钮：调用changeSlide(1) -->
+            
+            <!-- 轮播指示器（小圆点） -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span> <!-- 指示器1（激活）：点击跳转到第1张 -->
+                <span class="indicator" onclick="currentSlide(2)"></span> <!-- 指示器2：点击跳转到第2张 -->
+                <span class="indicator" onclick="currentSlide(3)"></span> <!-- 指示器3：点击跳转到第3张 -->
+                <span class="indicator" onclick="currentSlide(4)"></span> <!-- 指示器4：点击跳转到第4张 -->
+                <span class="indicator" onclick="currentSlide(5)"></span> <!-- 指示器5：点击跳转到第5张 -->
+                <span class="indicator" onclick="currentSlide(6)"></span> <!-- 指示器6：点击跳转到第6张 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面主要内容区域 -->
+    <div class="content">
+        <!-- 福建简介板块 -->
+        <section class="section"> <!-- 板块容器 -->
+            <div class="section-title-center"> <!-- 标题居中容器 -->
+                <div class="section-title">福建简介</div> <!-- 板块标题 -->
+            </div>
+            <div class="intro-content"> <!-- 简介内容容器（图文布局） -->
+                <div class="intro-text"> <!-- 文字内容容器 -->
+                    <h2 class="intro-title">福建（简称福省，简称"闽"）</h2> <!-- 简介标题 -->
+                    <!-- 简介第一段：行政区划、地理位置 -->
+                    <p class="intro-description">福建省，简称闽，中华人民共和国省级行政区，省会福州市，地处中国东南沿海，东北与浙江省毗邻，西北与江西省接壤，西南与广东省相连，东南隔台湾海峡与台湾省相望；全省地势西北高，东南低，呈"依山傍海"态势，境内山地、丘陵面积约占全省总面积的90%；属亚热带海洋性季风气候。全省陆地面积12.4万平方千米，海域面积13.6万平方千米。截至2023年末，福建省辖9个地级市，截至2024年末，福建省常住人口4193万人。</p>
+                    <!-- 简介第二段：历史、文化、世界遗产 -->
+                    <p class="intro-description">唐开元二十一年（733），设立军事管辖建制。从福州、建州各取一字，名为福建经略军使，与福州都督府并存。元明时期，置福建行省中书省。明洪武九年（1376），置福建承宣布政司衙门。福建历史代表文化为八闽文化。福建位于东南沿海与海峡的交通冲，是历史上海上丝绸之路、郑和下西洋的起点，也是海上商贸集散地；对外交流历史悠久，经济外向度高，是中国对外通商最早的省份之一，来元明期间是世界知名港口。海上丝绸之路起点，福州是郑和下西洋的驻泊地和出发地。期有世界遗产5处，双世遗武夷山世界文化遗产被誉为，福建土楼。</p>
+                    <!-- 简介第三段：经济、政策优势 -->
+                    <p class="intro-description">福建省是国家数字经济创新发展试验区、国家对外开放的重要地区，拥有经济特区、自由贸易试验区、综合实验区、21世纪海上丝绸之路核心区等多区叠加优势。</p>
+                </div>
+                <div class="intro-image"> <!-- 图片容器 -->
+                    <img src="./images/7.jpg" alt="福建风景"> <!-- 福建风景图片 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 旅游推荐板块 -->
+        <section class="section"> <!-- 板块容器 -->
+            <div class="section-title-center"> <!-- 标题居中容器 -->
+                <div class="section-title">旅游推荐</div> <!-- 板块标题 -->
+            </div>
+            <div class="tourism-grid"> <!-- 旅游推荐网格容器（4列布局） -->
+                <!-- 鼓浪屿推荐项 -->
+                <div class="tourism-item"> <!-- 旅游项容器 -->
+                    <div class="tourism-images"> <!-- 旅游项图片容器（2x2布局） -->
+                        <img src="./images/8.jpg" alt="鼓浪屿1">
+                        <img src="./images/9.jpg" alt="鼓浪屿2">
+                        <img src="./images/10.jpg" alt="鼓浪屿3">
+                        <img src="./images/11.jpg" alt="鼓浪屿4">
+                    </div>
+                    <div class="tourism-name">鼓浪屿</div> <!-- 旅游项名称 -->
+                    <div class="tourism-desc">鼓浪屿，原名"圆沙洲"，位于福建省厦门市思明区鼓浪屿街道，岛上气候宜人，四季如春，无车马喧嚣，有鸟语花香，素有"海上花园"之誉。鼓浪屿全岛的绿地覆盖率超过40%，植物种群丰富，各种乔木、灌木、藤木、地被植物共90多科，1000多种。代表景点有：日光岩、菽庄花园、皓月园、毓园、鼓浪石、鼓浪屿钢琴博物馆、郑成功纪念馆、海底世界、天然海滨浴场、海天堂构等。</div> <!-- 旅游项描述 -->
+                </div>
+                
+                <!-- 武夷山推荐项 -->
+                <div class="tourism-item">
+                    <div class="tourism-images">
+                        <img src="./images/12.jpg" alt="武夷山1">
+                        <img src="./images/13.jpg" alt="武夷山2">
+                        <img src="./images/14.jpg" alt="武夷山3">
+                        <img src="./images/15.jpg" alt="武夷山4">
+                    </div>
+                    <div class="tourism-name">武夷山</div>
+                    <div class="tourism-desc">武夷山位于江西与福建西北部两省交界处，武夷山脉北段东南麓总面积999.75平方公里，是中国著名的风景旅游区和避暑胜地。属典型的丹霞地貌，是首批国家级重点风景名胜区之一，于1999年12月被联合国教科文组织列入《世界遗产名录》，是全球生物多样性保护的关键地区。武夷山是三教名山。自秦汉以来，武夷山就为羽流禅家栖息之地，留下了不少宫观、道院和庵堂故址。武夷山还曾是儒家学者倡道讲学之地。</div>
+                </div>
+                
+                <!-- 三坊七巷推荐项 -->
+                <div class="tourism-item">
+                    <div class="tourism-images">
+                        <img src="./images/16.jpg" alt="三坊七巷1">
+                        <img src="./images/17.jpg" alt="三坊七巷2">
+                        <img src="./images/18.jpg" alt="三坊七巷3">
+                        <img src="./images/19.jpg" alt="三坊七巷4">
+                    </div>
+                    <div class="tourism-name">三坊七巷</div>
+                    <div class="tourism-desc">三坊七巷是国家5A级旅游景区，是福州老城区经历了建国后的拆迁建设后仅存下来的一部分。是福州的历史之源、文化之根，自晋、唐形成起，便是贵族和士大夫的聚居地，清至民国走向辉煌。区域内现存古民居约有270座，有159处被列入保护建筑。以沈葆桢故居、林觉民故居、严复故居等9处典型建筑为代表的三坊七巷古建筑群，被国务院公布为全国重点文物保护单位。</div>
+                </div>
+                
+                <!-- 永定土楼推荐项 -->
+                <div class="tourism-item">
+                    <div class="tourism-images">
+                        <img src="./images/20.jpg" alt="永定土楼1">
+                        <img src="./images/21.jpg" alt="永定土楼2">
+                        <img src="./images/22.jpg" alt="永定土楼3">
+                        <img src="./images/23.jpg" alt="永定土楼4">
+                    </div>
+                    <div class="tourism-name">永定土楼</div>
+                    <div class="tourism-desc">福建土楼，又称福建圆楼，是中华文明的瑰宝，是世界上独一无二的、神话般的山村民居建筑，是中国古建筑的一朵奇葩，它以历史悠久、风格独特、规模宏大、结构精巧等特点独立于世界民居建筑艺术之林。福建土楼的建筑材料甚为奇特，由粘土、糯米、红糖、竹片、水等组成，建成的土楼冬暖夏凉，具有很强的抗台风、抗地震能力。</div>
+                </div>
+            </div>
+            
+            <!-- 查看更多按钮区域 -->
+            <div class="more-section"> <!-- 按钮容器 -->
+                <button class="more-btn">查看更多</button> <!-- 查看更多按钮 -->
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚文字 -->
+    <div class="footer-text">
+        世界那么大，我想去看看！
+    </div>
+
+    <!-- 首页专属轮播图JS（其他页面用main.js） -->
+    <script>
+        // 轮播图当前索引（初始为0，对应第一张）
+        let currentSlideIndex = 0;
+        // 获取所有轮播幻灯片元素
+        const slides = document.querySelectorAll('.carousel-slide');
+        // 获取所有轮播指示器元素
+        const indicators = document.querySelectorAll('.indicator');
+        // 轮播图总数
+        const totalSlides = slides.length;
+
+        // 显示指定索引的幻灯片
+        function showSlide(index) {
+            // 移除所有幻灯片和指示器的active（激活）状态
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // 处理索引边界：超过最后一张则回到第一张，小于第一张则到最后一张
+            if (index >= totalSlides) {
+                currentSlideIndex = 0;
+            } else if (index < 0) {
+                currentSlideIndex = totalSlides - 1;
+            } else {
+                currentSlideIndex = index;
+            }
+            
+            // 为当前索引的幻灯片和指示器添加active状态
+            slides[currentSlideIndex].classList.add('active');
+            indicators[currentSlideIndex].classList.add('active');
+        }
+
+        // 切换幻灯片（direction：-1=上一张，1=下一张）
+        function changeSlide(direction) {
+            showSlide(currentSlideIndex + direction);
+        }
+
+        // 跳转到指定索引的幻灯片（index：用户点击的指示器序号，从1开始）
+        function currentSlide(index) {
+            showSlide(index - 1); // 转换为从0开始的索引
+        }
+
+        // 自动轮播：每5秒切换到下一张
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+</body>
+</html>

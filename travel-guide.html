@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"> <!-- 字符编码 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 移动端适配 -->
+    <title>旅游攻略 - 福建之旅</title> <!-- 页面标题 -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- 引入样式表 -->
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="./images/logo.png" alt="福建之旅">
+                福建之旅
+            </a>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="请输入关键词">
+                <button class="search-btn">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航菜单 -->
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="about.html" class="nav-item">关于福建</a>
+            <a href="travel-guide.html" class="nav-item active">旅游攻略</a> <!-- 当前页高亮 -->
+            <a href="food.html" class="nav-item">美食小吃</a>
+            <a href="contact.html" class="nav-item">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 轮播图区域 -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-overlay"></div> <!-- 轮播遮罩层 -->
+            
+            <!-- 轮播幻灯片1-6 -->
+            <div class="carousel-slide active">
+                <img src="./images/1.jpg" alt="轮播图1">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/2.jpg" alt="轮播图2">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/3.jpg" alt="轮播图3">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/4.jpg" alt="轮播图4">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/5.jpg" alt="轮播图5">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/6.jpg" alt="轮播图6">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            
+            <!-- 轮播切换按钮 -->
+            <button class="carousel-controls prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-controls next" onclick="changeSlide(1)">❯</button>
+            
+            <!-- 轮播指示器 -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+                <span class="indicator" onclick="currentSlide(5)"></span>
+                <span class="indicator" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="content">
+        <div class="section">
+            <div class="section-title-center">
+                <div class="section-title">旅游推荐</div> <!-- 板块标题 -->
+            </div>
+            
+            <!-- 东山岛攻略 -->
+            <section class="guide-section"> <!-- 攻略板块容器（图文布局） -->
+                <div class="guide-image"> <!-- 攻略图片容器 -->
+                    <img src="./images/24.jpg" alt="东山岛"> <!-- 攻略图片 -->
+                </div>
+                <div class="guide-text"> <!-- 攻略文字容器 -->
+                    <h2 class="guide-title">东山岛</h2> <!-- 攻略标题 -->
+                    <p class="guide-description">东山岛，隶属于美丽的闽南渔都—福建省漳州市东山县，是福建省第二大海岛。位于厦门南面，漳州东面，广东省东面的地带，在漳州境内的十八个县市之后。东山现为福建省重点旅游县和福建省第二大渔港。全岛面积达194平方公里，是福建省第二大海岛。东山海上风光秀丽的白色沙滩，自然形成的白天鹅湖，其辽阔的海面上，景点多而美。海上观光旅游，大大小小的美景无数，在绿色树荫之中。东山八景的名胜古迹，以其优美的风景，吸引了众多游客和影视剧组前来观光和拍摄。</p> <!-- 攻略描述 -->
+                </div>
+            </section>
+
+            <!-- 湄洲岛攻略 -->
+            <section class="guide-section">
+                <div class="guide-image">
+                    <img src="./images/25.jpg" alt="湄洲岛">
+                </div>
+                <div class="guide-text">
+                    <h2 class="guide-title">湄洲岛</h2>
+                    <p class="guide-description">湄洲岛，位于福建省莆田市秀屿区湄洲镇海峡西岸经济区的重要组成部分，是投资置业的热土。岛上有众多的景点，如妈祖庙、妈祖故里遗址公园等，每年吸引大量信众前来朝拜。气候宜人，四季如春。岛长9.6公里，宽约1.3公里，面积14.35平方公里，是南日群岛之一。相传此岛形状似妇女的眉毛，因此而得名。岛上渔网帆影，仿佛来到了美国夏威夷；有着湛蓝的海水、金黄的沙滩，还有妈祖庙、海边木屋、民俗文化等，这些都是岛上的精华。岛上具有典型的海滨风光，有着得天独厚的旅游资源，是闽中旅游的一颗明珠，每年来岛观光旅游的游客达100多万人次，成为避暑胜地。</p>
+                </div>
+            </section>
+
+            <!-- 白水洋攻略 -->
+            <section class="guide-section">
+                <div class="guide-image">
+                    <img src="./images/26.jpg" alt="白水洋">
+                </div>
+                <div class="guide-text">
+                    <h2 class="guide-title">白水洋</h2>
+                    <p class="guide-description">白水洋是国家级海洋地质公园。白水洋地质公园位于福建省西北部南平地区的屏南县境内，总面积77.34平方公里。白天宽阔平浅的河床，宛如一大块铺设在各路中央的白色地板，据说有"天下绝景，宇宙之谜"的美称，因其奇特的地质现象而被誉为"天下第一景"。其地质现象堪称天下奇观，大面积的水蚀花岗岩体经地质运动和人工雕琢，形成一系列浅水广场，是世界上发现的第一个浅水广场群地质现象，被专家称为"世界少有，福建独一无二"的奇特景象。在炎炎夏日，踏在白水洋的广场上，感受着清凉的泉水从脚下流过，是避暑休闲的绝佳去处，素有"天然泳池"之美誉。</p>
+                </div>
+            </section>
+
+            <!-- 开元寺攻略 -->
+            <section class="guide-section">
+                <div class="guide-image">
+                    <img src="./images/27.jpg" alt="开元寺">
+                </div>
+                <div class="guide-text">
+                    <h2 class="guide-title">开元寺</h2>
+                    <p class="guide-description">泉州开元寺，坐落于福建省泉州市鲤城区西街，是全国首批重点文物保护单位，总面积78000平方米，前身为贵族住宅，初称东苑，后改为东山寺，最后定名开元寺。它不仅是福建省内规模最大的佛教寺院，更是具有汉传佛教特色的建筑群典范，每年都有很多游客和信众来此参观和祈拜。开元寺始建于唐初垂拱二年（公元686年），至今已有1300多年的历史。寺院内有不少名贵古迹，如大雄宝殿、甘露戒坛、蓝毗尼花园、梅石书院等。其中，大雄宝殿为代表性建筑，寺院内两座九楼五檐佛塔，在全国现存的几千座古塔中，其制作材料、营造技艺和造型艺术都堪称绝妙。开元寺不仅荟萃了闽南古建筑精华，也充分体现了泉州作为"海上丝绸之路"起点城市多元文化交汇融合的历史印迹。</p>
+                </div>
+            </section>
+
+            <!-- 平潭岛攻略 -->
+            <section class="guide-section">
+                <div class="guide-image">
+                    <img src="./images/28.jpg" alt="平潭岛">
+                </div>
+                <div class="guide-text">
+                    <h2 class="guide-title">平潭岛</h2>
+                    <p class="guide-description">平潭岛是福建省最大的岛屿，地处台湾海峡西岸中部，位于福建省平潭县境内。岛上有美丽的自然风光，更有深邃的人文内涵，平潭民俗广泛吸收了中原文化、海洋文化、客家文化的特色，并与台湾同根同源，都有共同的文化根基，体现了丰富的民俗文化内涵。平潭岛海岸线蜿蜒曲折，港湾众多，其中以塘屿湾、坛南湾最为景观宜人，素有平潭有"千礁百岛"之称，奇岩怪石，美不胜收。该岛南、北、东面三面环海，西面为海峡。平潭岛地貌类型分为平原、台地、低丘三种，海拔比较低，山峦绵延，海岛、沙滩、花岗岩等自然景观资源丰富，是一个集自然景观、历史人文、海峡文化等独特元素的海岛旅游目的地。该岛还是中国距离台湾本岛最近的地方，对台贸易、旅游、渔业等交流十分便利。</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- 页脚文字 -->
+    <div class="footer-text">
+        世界那么大，我想去看看！
+    </div>
+
+    <!-- 引入JS文件 -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"> <!-- 字符编码 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 移动端适配 -->
+    <title>美食小吃 - 福建之旅</title> <!-- 页面标题 -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- 引入样式表 -->
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="./images/logo.png" alt="福建之旅">
+                福建之旅
+            </a>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="请输入关键词">
+                <button class="search-btn">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航菜单 -->
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="about.html" class="nav-item">关于福建</a>
+            <a href="travel-guide.html" class="nav-item">旅游攻略</a>
+            <a href="food.html" class="nav-item active">美食小吃</a> <!-- 当前页高亮 -->
+            <a href="contact.html" class="nav-item">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 轮播图区域 -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-overlay"></div> <!-- 轮播遮罩层 -->
+            
+            <!-- 轮播幻灯片1-6 -->
+            <div class="carousel-slide active">
+                <img src="./images/1.jpg" alt="轮播图1">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/2.jpg" alt="轮播图2">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/3.jpg" alt="轮播图3">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/4.jpg" alt="轮播图4">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/5.jpg" alt="轮播图5">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/6.jpg" alt="轮播图6">
+                <div class="carousel-title">
+                    <img src="./images/1.png" alt="标题">
+                </div>
+            </div>
+            
+            <!-- 轮播切换按钮 -->
+            <button class="carousel-controls prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-controls next" onclick="changeSlide(1)">❯</button>
+            
+            <!-- 轮播指示器 -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+                <span class="indicator" onclick="currentSlide(5)"></span>
+                <span class="indicator" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="content">
+        <div class="section">
+            <div class="section-title-center">
+                <div class="section-title">美食小吃</div> <!-- 板块标题 -->
+            </div>
+            
+            <!-- 美食网格容器 -->
+            <div class="food-grid">
+                <!-- 五香卷 -->
+                <div class="food-item"> <!-- 美食项容器 -->
+                    <img src="./images/29.jpg" alt="五香卷" class="food-image"> <!-- 美食图片 -->
+                    <div class="food-content"> <!-- 美食内容容器 -->
+                        <h3 class="food-name">五香卷</h3> <!-- 美食名称 -->
+                        <p class="food-description">五香卷，是传统闽菜中的经典小食，以其独特的风味和丰富的营养深受人们喜爱。它采用优质的豆腐皮作为外皮，内馅通常由猪肉丝、冬笋丝、海蛎干、虾米、红萝卜丝等多种食材调制而成，加入五香粉、生抽、料酒等调料精心调味。制作过程中，将调好的馅料包裹在豆腐皮内，卷成卷状，然后下油锅炸至外皮金黄酥脆。成品的五香卷外表金黄，内馅鲜美，口感层次丰富，既有豆腐皮的嫩滑，又有内馅的鲜香，是福建地区备受喜爱的传统小吃之一。</p> <!-- 美食描述 -->
+                    </div>
+                </div>
+                
+                <!-- 海蛎煎 -->
+                <div class="food-item">
+                    <img src="./images/30.jpg" alt="海蛎煎" class="food-image">
+                    <div class="food-content">
+                        <h3 class="food-name">海蛎煎</h3>
+                        <p class="food-description">海蛎煎，是闽南地区最具代表性的传统小吃之一，以新鲜的海蛎（牡蛎）为主料制作而成。这道美食选用肥美的海蛎，配以鸡蛋、地瓜粉、韭菜等食材，在平底锅上煎制而成。制作时先将海蛎与地瓜粉调成糊状，倒入热油锅中摊成饼状，待底面凝固后打入鸡蛋，撒上韭菜段，翻面煎至两面金黄。成品外酥内嫩，海蛎鲜美，蛋香浓郁，韭菜提味，搭配特制的甜辣酱食用，口感丰富，鲜香可口，是来福建必尝的经典美食。</p>
+                    </div>
+                </div>
+                
+                <!-- 烧肉粽 -->
+                <div class="food-item">
+                    <img src="./images/31.jpg" alt="烧肉粽" class="food-image">
+                    <div class="food-content">
+                        <h3 class="food-name">烧肉粽</h3>
+                        <p class="food-description">烧肉粽，是福建泉州地区的传统特色小吃，以其独特的制作工艺和丰富的内馅而闻名。不同于普通水煮粽子，烧肉粽的糯米需要先用猪油、生抽等调料炒制，使米粒呈现诱人的金黄色泽。内馅丰富多样，包括五花肉、咸蛋黄、香菇、虾米、板栗等多种食材，每一样都经过精心调味。制作时将炒制好的糯米和各种内馅用粽叶包成三角形，再用水煮熟。成品的烧肉粽色泽金黄，香味浓郁，糯米粒粒分明，内馅鲜香可口，是福建地区端午节和日常生活中不可缺少的美食。</p>
+                    </div>
+                </div>
+                
+                <!-- 沙茶面 -->
+                <div class="food-item">
+                    <img src="./images/32.jpg" alt="沙茶面" class="food-image">
+                    <div class="food-content">
+                        <h3 class="food-name">沙茶面</h3>
+                        <p class="food-description">沙茶面，是厦门最具代表性的传统小吃之一，因其独特的沙茶酱汤头而得名。沙茶酱是由花生、芝麻、鱼干、虾米、椰丝、大蒜、洋葱、辣椒等多种食材熬制而成的复合调料，味道鲜美独特。制作沙茶面时，先用沙茶酱调制汤头，加入高汤煮开，再放入面条煮熟。配菜丰富多样，可根据个人喜好选择猪肉片、鱿鱼、虾仁、豆腐、韭菜、豆芽等。成品汤头浓郁香甜，面条爽滑有弹性，配菜新鲜丰富，整体口感层次分明，是闽南地区最受欢迎的面食之一，深受当地人和游客的喜爱。</p>
+                    </div>
+                </div>
+                
+                <!-- 姜母鸭 -->
+                <div class="food-item">
+                    <img src="./images/33.jpg" alt="姜母鸭" class="food-image">
+                    <div class="food-content">
+                        <h3 class="food-name">姜母鸭</h3>
+                        <p class="food-description">姜母鸭，是福建一道传统的特色菜肴，以其独特的制作工艺和丰富的营养价值而备受推崇。选用优质的母鸭作为主料，经过特殊的腌制和烹饪过程制作而成。制作时先将鸭子用黄酒、生抽、老抽、冰糖、八角、桂皮等多种调料腌制，使其充分入味，然后用文火慢炖，直至鸭肉酥烂入味。成品的姜母鸭色泽金黄诱人，肉质酥烂不腻，汤汁浓郁鲜美，营养丰富。这道菜不仅味道鲜美，还有滋补养生的功效，是福建地区宴请宾客和节日聚餐的经典菜肴之一，深受食客们的喜爱和赞誉。</p>
+                    </div>
+                </div>
+                
+                <!-- 土笋冻 -->
+                <div class="food-item">
+                    <img src="./images/34.jpg" alt="土笋冻" class="food-image">
+                    <div class="food-content">
+                        <h3 class="food-name">土笋冻</h3>
+                        <p class="food-description">土笋冻，是泉州地区独具特色的传统小吃，以其独特的制作原料和清爽的口感而闻名。土笋实际上是一种生长在海边滩涂中的环节动物，学名为"星虫"，因其形似笋而得名。制作土笋冻时，先将新鲜的土笋清洗干净，去除内脏和杂质，然后放入锅中加水熬煮。土笋本身含有丰富的胶质，经过长时间熬煮后，汤汁会自然凝固成冻状。成品的土笋冻晶莹透明，质地Q弹，口感爽滑，配以蒜蓉、酱油、醋、辣椒油等调料食用，清香爽口，具有清热降火的功效，是夏季消暑的绝佳小吃。</p>
+                    </div>
+                </div>
+                
+                <!-- 厦门薄饼 -->
+                <div class="food-item">
+                    <img src="./images/35.jpg" alt="厦门薄饼" class="food-image">
+                    <div class="food-content">
+                        <h3 class="food-name">厦门薄饼</h3>
+                        <p class="food-description">厦门薄饼，又称春饼，是厦门地区传统的节庆小吃，特别在清明节期间备受欢迎。薄饼皮是用面粉调制成面糊，在平底锅上摊成薄如纸张的饼皮，技艺精湛的师傅能将饼皮做得几乎透明。内馅丰富多样，通常包括豆芽菜、韭菜、胡萝卜丝、蛋皮丝、香肠片、花生酥、紫菜、冬笋丝、豆干丝等十多种食材，每一样都经过精心烹制。食用时将各种馅料包入薄饼皮中，卷成筒状，一口咬下，各种食材的味道在口中交融，层次丰富，清脆爽口。厦门薄饼不仅味道鲜美，还寓意着团圆和新生，是承载着深厚文化内涵的传统美食。</p>
+                    </div>
+                </div>
+                
+                <!-- 芋包 -->
+                <div class="food-item">
+                    <img src="./images/36.jpg" alt="芋包" class="food-image">
+                    <div class="food-content">
+                        <h3 class="food-name">芋包</h3>
+                        <p class="food-description">芋包，是福建闽南地区一道极具特色的传统小吃，深受当地居民喜爱。芋包的制作十分讲究，芋泥足芋包的主要外皮原料，其质地软糯，散发着浓郁的芋头香气。接着，准备馅料，馅料通常由猪肉、香菇、笋干、虾米等食材切成小丁后炒制而成，各种食材的香味相互交融，形成独特的风味。将炒好的馅料晾凉后，用芋泥包衷起来，搓成圆形或椭圆形的芋包生坯。芋包在蒸煮过程中，芋泥的香气与馅料的香味相互渗透，使得芋包更加关味诱人。出锅后的芋包，外表呈现出淡淡的芋头色泽，散发着热气与香气。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚文字 -->
+    <div class="footer-text">
+        世界那么大，我想去看看！
+    </div>
+
+    <!-- 引入JS文件 -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
